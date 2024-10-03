@@ -4,33 +4,29 @@ pragma solidity ^0.8.18;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract DegenToken is ERC20, Ownable {
+contract DegenToken is ERC20, Ownable(msg.sender) {
 
     struct Item {
         string name; 
         uint price; 
+        uint stock; 
     }
 
-    address public owner; 
     mapping(uint => Item) public gameStore; 
 
-    gameStore[0] = Item("Potion", 1);
-    gameStore[1] = Item("Royal Sword", 50);
-    gameStore[2] = Item("Dragon Armor", 25); 
-     
-    constructor() ERC20("Degen", "DGN") {
-        owner = msg.sender; 
-    }
+    constructor() ERC20("Degen", "DGN") { 
+        gameStore[1] = Item("Potion", 3, 10);
+        gameStore[2] = Item("Royal Sword", 50, 10); 
+        gameStore[3] = Item("Dragon Armor", 35, 10);
+    }  
 
-    modifier onlyOwner {
-        require(msg.sender == owner);
-        _; 
-    }
-
-    function redeem(uint itemID) public {
+    function redeem(uint itemID, uint numberItems) public {
         require(itemID > 0, "Supply a valid Item ID");
-        require(balanceOf(msg.sendere) >= gameStore[itemID].price, "Insufficient DGN Tokens");  
-        _burn(msg.sender, price); 
+        require(numberItems > 0, "No. of Items to Purchase must be more than 0");
+        require(gameStore[itemID].stock != 0, "Item out of Stock");
+        require(gameStore[itemID].stock >= numberItems, "Cannot purchase more than the current stock!");
+        require(balanceOf(msg.sender) >= gameStore[itemID].price, "Insufficient DGN Tokens");  
+        _burn(msg.sender, gameStore[itemID].price); 
     }
 
     function mint(address to, uint amount) public onlyOwner {
@@ -41,19 +37,28 @@ contract DegenToken is ERC20, Ownable {
         require(amount > 0, "Transfer of more than 0 DGN is required!");
         require(balanceOf(msg.sender) >= amount, "Insufficient DGN to transfer");
         _transfer(msg.sender, to, amount);
+
+        return true;
     }
     
-    function balance() public returns (uint) {
+    function balance() public view returns (uint) {
         return balanceOf(msg.sender);
     }
 
     function burn(uint amount) public {
         require(amount > 0, "Burn amount of more than 0 DGN is required!");
-        require(balanceOf(from) >= amount, "Insufficient amount of DGN to burn");
+        require(balanceOf(msg.sender) >= amount, "Insufficient amount of DGN to burn");
         _burn(msg.sender, amount);
     }
 
+    function addItem(uint itemID, string memory _name, uint _price, uint _stock) public onlyOwner {
+        require(itemID > 0, "Item ID Register must be greater than 0");
+
+        gameStore[itemID] = Item(_name, _price, _stock);
+    }
+
     function getItem(uint itemID) public view returns (Item memory) {
+        require(itemID > 0, "Supply valid Item ID");
         return gameStore[itemID]; 
     }
 }
