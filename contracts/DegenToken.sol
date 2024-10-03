@@ -26,6 +26,7 @@ contract DegenToken is ERC20, Ownable(msg.sender) {
         require(gameStore[itemID].stock != 0, "Item out of Stock");
         require(gameStore[itemID].stock >= numberItems, "Cannot purchase more than the current stock!");
         require(balanceOf(msg.sender) >= gameStore[itemID].price, "Insufficient DGN Tokens");  
+        gameStore[itemID].stock -= 1;
         _burn(msg.sender, gameStore[itemID].price); 
     }
 
