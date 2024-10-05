@@ -1,12 +1,12 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/AvaxProject/contracts/Degen.sol": {
-      "lastModificationDate": 1682665722268,
-      "contentHash": "45073cb53a0ed834dd66d2b375367bd4",
-      "sourceName": "contracts/Degen.sol",
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\contracts\\DegenToken.sol": {
+      "lastModificationDate": 1728122261924,
+      "contentHash": "c1e94e73e69cb7f56208ef45c90c1296",
+      "sourceName": "contracts/DegenToken.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -33,18 +33,18 @@
         "@openzeppelin/contracts/access/Ownable.sol"
       ],
       "versionPragmas": [
-        "^0.8.9"
+        "^0.8.18"
       ],
       "artifacts": [
-        "Degen"
+        "DegenToken"
       ]
     },
-    "/home/AvaxProject/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1682666796008,
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1728096651869,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -76,12 +76,12 @@
         "Ownable"
       ]
     },
-    "/home/AvaxProject/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1682666795828,
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
+      "lastModificationDate": 1728096647529,
       "contentHash": "834a0dde221759af42b030253315b086",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -115,12 +115,12 @@
         "ERC20"
       ]
     },
-    "/home/AvaxProject/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1682666795728,
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1728096646058,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -150,12 +150,12 @@
         "Context"
       ]
     },
-    "/home/AvaxProject/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1682666795938,
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1728096650400,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -185,12 +185,12 @@
         "IERC20"
       ]
     },
-    "/home/AvaxProject/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1682666795938,
+    "C:\\Users\\grusp\\Documents\\FEUTECH\\CS0066\\ETH-INT-AVAX\\DegenToken\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
+      "lastModificationDate": 1728096650598,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.27",
         "settings": {
           "optimizer": {
             "enabled": false,
