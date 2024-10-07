@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -15,6 +15,7 @@ contract DegenToken is ERC20, Ownable {
     mapping(uint => Item) public gameStore; 
     string[] private itemNames; 
 
+
     constructor() ERC20("Degen", "DGN") { 
         gameStore[1] = Item("Potion", 3, 10);
         gameStore[2] = Item("Royal Sword", 50, 10); 
@@ -23,7 +24,7 @@ contract DegenToken is ERC20, Ownable {
         itemNames.push(gameStore[1].name);
         itemNames.push(gameStore[2].name);
         itemNames.push(gameStore[3].name);
-    }  
+    } 
 
     function redeem(uint itemID, uint numberItems) public {
         require(itemID > 0, "Supply a valid Item ID");
