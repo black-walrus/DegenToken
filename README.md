@@ -135,7 +135,7 @@ contract DegenToken is ERC20, Ownable(msg.sender) {
 ```
 
 5. In the left tab, click Solidity Compiler and set the Compiler version 
-matching the pne specified in the contract (ver. 0.8.20). then click
+matching the pane specified in the contract (ver. 0.8.20). then click
 "Compile DegenToken.sol". 
 6. In the left tab, click 
 Deploy & run transactions and set the environment to 'Injected Provider - Metamask' and fill the field beside the 'At Address' button with the contract address "0x248542cc653aD0C7D11B4579C715A31176664aAe" then click the said button. Make sure that your Fuji Account has enough Test AVAX to deploy the contract.  
