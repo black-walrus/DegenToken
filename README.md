@@ -38,6 +38,19 @@ with the corresponding `itemID`.
 - MetaMask Wallet Extension with connection to the Avalanche Fuji Testnet Network and test AVAX in the wallet to pay. Need at least 2 accounts in that network to fully utilize the DegenToken contract. To get Test AVAX, 
 go to this Avalance Testnet Faucet - https://core.app/en/tools/testnet-faucet/
 
+To connect to Fuji Testnet: 
+1. From the Metamask Wallet, click the upper-left icon and click the 
+"Add network button". 
+2. In the new tab, click "Add network manually" at the bottom.
+3. Fill the fields with the following and press Save: 
+ - Network Name: Fuji 
+ - New RPC URL: https://api.avax-test.network/ext/bc/C/rpc
+ - Chain ID: 43113 
+ - Currency symbol: AVAX
+ - Block explorer URL: https://43113.testnet.snowtrace.dev
+4. Select the added network and add accounts as needed.
+
+
 ### Executing program
 
 1. Go to https://remix.ethereum.org/
